@@ -26,7 +26,8 @@ def main():  # main function
             print("Your password has been encoded and stored!\n")
         elif choice == 2:  # if choice is 2, decodes encoded password
             decoded = decoder(encoded)  # decodes encoded password and stores value
-            print("The encoded password is " + encoded + " and the original password is " + decoded + ".\n")  # prints statement with both encoded and original passwords
+            print("The encoded password is " + encoded + " and the original password is " + decoded + ".\n")
+            # prints statement with both encoded and original passwords
         elif choice == 3:  # if choice is 3, ends program
             continue_codec = False
 

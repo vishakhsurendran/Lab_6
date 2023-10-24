@@ -2,17 +2,23 @@
 def encoder(password):  # method to encode a password by adding three to each digit
     encoded_password = ""  # creates empty string to hold encoded password
     for i in password:  # iterates through password and adds 3 to each digit
-        encoded_digit = int(i) + 3
+        encoded_digit = (int(i) + 3) % 10
         encoded_password += str(encoded_digit)  # adds encoded digit to variable
     return encoded_password  # returns encoded password
 
 
 def decoder(code):
-    pass
+    decoded_password = ""  # creates empty string to hold decoded password
+    for i in code:  # iterates through code and subtracts 3 to each digit
+        decoded_digit = (int(i) - 3) % 10
+        decoded_password += str(decoded_digit)  # adds decoded digit to variable
+    return decoded_password  # returns decoded password
 
 
 def main():  # main function
     continue_codec = True  # continues program
+    encoded = None
+    decoded = None
     while continue_codec:  # while loop to loop program
         print("Menu")  # prints menu with options for user
         print("-------------")
